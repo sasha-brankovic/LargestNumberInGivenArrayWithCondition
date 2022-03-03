@@ -3,7 +3,7 @@ package com.company;
 class
 Main {
     public static void main(String[] args) {
-        int[] arrayOfNumbers = {0,0,0,-10,-15,22,-13,11,-1,2,9,-12,-2,55,100,-100};
+        int[] arrayOfNumbers = {};
         int conditionNumber = 100;
         Numbers numbers = new Numbers(arrayOfNumbers, conditionNumber);
         numbers.maxNumber();
@@ -22,7 +22,7 @@ class Numbers {
     }
 
     public void maxNumber() {
-        if (arrayOfNumbers == null) {
+        if (arrayOfNumbers.length == 0) {
             System.out.println("The array is empty");
         } else if (arrayOfNumbers.length == 1 && arrayOfNumbers[0] < conditionNumber) {
             currentMaxNumber = arrayOfNumbers[0];
