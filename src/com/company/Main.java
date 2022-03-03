@@ -1,7 +1,6 @@
 package com.company;
 
-class
-Main {
+class Main {
     public static void main(String[] args) {
         int[] arrayOfNumbers = {};
         int conditionNumber = 100;
