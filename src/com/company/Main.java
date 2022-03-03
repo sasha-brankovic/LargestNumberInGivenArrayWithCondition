@@ -25,9 +25,9 @@ class Numbers {
             System.out.println("The array is empty");
         } else if (arrayOfNumbers.length == 1 && arrayOfNumbers[0] < conditionNumber) {
             currentMaxNumber = arrayOfNumbers[0];
-            System.out.println("The array contains only one element and it is less than the specified number: " + conditionNumber+", and that is the number: "+currentMaxNumber);
+            System.out.println("The array contains only one element and it is lower than the specified number: " + conditionNumber+", and that is the number: "+currentMaxNumber);
         } else if (arrayOfNumbers.length == 1 && arrayOfNumbers[0] >= conditionNumber) {
-            System.out.println("The array contains only one element and it is not less than the specified number: " + conditionNumber);
+            System.out.println("The array contains only one element and it is not lower than the specified number: " + conditionNumber);
         }
         else {
             for (int i = 0; i < arrayOfNumbers.length; i++) {
@@ -43,9 +43,9 @@ class Numbers {
                         currentMaxNumber = arrayOfNumbers[i];
                     }
                 }
-                System.out.println("The largest number in the array, which is at the same time smaller than the specified number: " + conditionNumber + " is the number: " + currentMaxNumber);
+                System.out.println("The biggest number in the array, which is at the same time lower than the specified number: " + conditionNumber + " is the number: " + currentMaxNumber);
             } else {
-                System.out.println("There is no number in the string that is less than the specified number: " + conditionNumber);
+                System.out.println("There is no number in the array that is lower than the specified number: " + conditionNumber);
             }
         }
     }
