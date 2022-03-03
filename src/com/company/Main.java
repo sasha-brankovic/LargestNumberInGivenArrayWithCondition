@@ -15,9 +15,9 @@ class Numbers {
     int currentMaxNumber;
     boolean isNumberInArrayLowerThanConditionNumber = false;
 
-    public Numbers(int[] numbersArray, int numberX) {
-        this.arrayOfNumbers = numbersArray;
-        this.conditionNumber = numberX;
+    public Numbers(int[] arrayOfNumbers, int conditionNumber) {
+        this.arrayOfNumbers = arrayOfNumbers;
+        this.conditionNumber = conditionNumber;
     }
 
     public void maxNumber() {
