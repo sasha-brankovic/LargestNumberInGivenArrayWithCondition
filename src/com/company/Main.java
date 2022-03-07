@@ -1,10 +1,9 @@
 package com.company;
 
-class
-Main {
+class Main {
     public static void main(String[] args) {
-        int[] arrayOfNumbers = {};
-        int conditionNumber = 100;
+        int[] arrayOfNumbers = {0,0,0,-10,-15,22,-13,11,-1,2,9,-12,-2,55,100,-100};
+        int conditionNumber = -1;
         Numbers numbers = new Numbers(arrayOfNumbers, conditionNumber);
         numbers.maxNumber();
     }
@@ -13,7 +12,7 @@ Main {
 class Numbers {
     int[] arrayOfNumbers;
     int conditionNumber;
-    int currentMaxNumber;
+    Integer currentMaxNumber = null;
     boolean isNumberInArrayLowerThanConditionNumber = false;
 
     public Numbers(int[] arrayOfNumbers, int conditionNumber) {
@@ -32,18 +31,15 @@ class Numbers {
         }
         else {
             for (int i = 0; i < arrayOfNumbers.length; i++) {
-                if (arrayOfNumbers[i] < conditionNumber) {
+                if (arrayOfNumbers[i] < conditionNumber && currentMaxNumber == null) {
                     currentMaxNumber = arrayOfNumbers[i];
                     isNumberInArrayLowerThanConditionNumber = true;
-                    break;
+                }else if (arrayOfNumbers[i] < conditionNumber && currentMaxNumber != null && arrayOfNumbers[i] >= currentMaxNumber){
+                    currentMaxNumber = arrayOfNumbers[i];
+                    isNumberInArrayLowerThanConditionNumber = true;
                 }
             }
             if (isNumberInArrayLowerThanConditionNumber) {
-                for (int i = 0; i < arrayOfNumbers.length; i++) {
-                    if (arrayOfNumbers[i] >= currentMaxNumber && arrayOfNumbers[i] < conditionNumber) {
-                        currentMaxNumber = arrayOfNumbers[i];
-                    }
-                }
                 System.out.println("The biggest number in the array, which is at the same time lower than the specified number: " + conditionNumber + " is the number: " + currentMaxNumber);
             } else {
                 System.out.println("There is no number in the array that is lower than the specified number: " + conditionNumber);
